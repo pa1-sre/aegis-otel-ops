@@ -1,0 +1,2 @@
+falco:
+  watch_config_files: false

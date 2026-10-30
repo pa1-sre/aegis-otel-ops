@@ -1,0 +1,8 @@
+mimir:
+  minio:
+    image:
+      repository: pgsty/silo
+      tag: RELEASE.2026-09-03T13-18-01Z
+    mcImage:
+      repository: pgsty/silo
+      tag: RELEASE.2026-09-03T13-18-01Z

@@ -1,0 +1,5 @@
+loki:
+  structuredConfig:
+    limits_config:
+      otlp_config:
+        default_tenant_id: "1"

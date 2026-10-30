@@ -1,0 +1,10 @@
+tempo:
+  ingester:
+    config:
+      replication_factor: 1
+mimir:
+  mimir:
+    structuredConfig:
+      ingester:
+        ring:
+          replication_factor: 1

@@ -1,0 +1,7 @@
+tempo:
+  traces:
+    otlp:
+      grpc:
+        enabled: true
+      http:
+        enabled: true
