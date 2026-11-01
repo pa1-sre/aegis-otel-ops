@@ -1,0 +1,29 @@
+grafana:
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+        - name: Loki
+          uid: loki
+          type: loki
+          url: http://loki.observability.svc.cluster.local:3100
+          isDefault: false
+        - name: Mimir
+          uid: prom
+          type: prometheus
+          url: http://lgtm-mimir-nginx/prometheus
+          isDefault: true
+        - name: Tempo
+          uid: tempo
+          type: tempo
+          url: http://lgtm-tempo-query-frontend:3200
+          isDefault: false
+          jsonData:
+            tracesToLogsV2:
+              datasourceUid: loki
+            lokiSearch:
+              datasourceUid: loki
+            tracesToMetrics:
+              datasourceUid: prom
+            serviceMap:
+              datasourceUid: prom
